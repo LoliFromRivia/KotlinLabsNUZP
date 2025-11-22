@@ -19,9 +19,12 @@ import com.diacht.ktest.juicefactory.SALT
 import com.diacht.ktest.juicefactory.TOMATO
 import com.diacht.ktest.juicefactory.TOMATO_CARROT_JUICE
 import com.diacht.ktest.juicefactory.TOMATO_JUICE
+import org.example.helloworld.SimulationConfig.getSimulationObject
+import org.example.helloworld.SimulationConfig.seed
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
+
 
 internal class L3Test {
     fun juiceProducts(k: Int) = listOf(
