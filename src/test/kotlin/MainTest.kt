@@ -7,6 +7,7 @@ import com.diacht.ktest.domain.usecases.ValidateL2IntTaskUseCase
 import com.diacht.ktest.domain.usecases.ValidateL2StrTaskUseCase
 import com.diacht.ktest.domain.usecases.ValidateL2UseCase
 import org.example.KTests.BuildConfig
+import org.example.helloworld.seed
 import org.junit.jupiter.api.Test
 import kotlin.test.DefaultAsserter.assertEquals
 import kotlin.test.assertNotEquals

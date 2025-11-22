@@ -8,22 +8,21 @@ import org.example.helloworld.BuildConfig
 import com.diacht.ktest.compose.startTestUi
 
 
-object SimulationConfig {
+
     fun seed(): String = "LoliFromRivia"
     fun labNumber() : Int = BuildConfig.LAB_NUMBER
 
     fun getSimulationObject(): FactoryItf {
         return CafeFactory()
     }
-}
 
 suspend fun main(args: Array<String>) {
-    println("Лабораторна робота №${SimulationConfig.labNumber()} користувача ${SimulationConfig.seed()}")
+    println("Лабораторна робота №${labNumber()} користувача ${seed()}")
 
     println("--- СИМУЛЯЦІЯ КАВ'ЯРНІ ---")
     println("----------------------------------------------")
 
-    val factory = SimulationConfig.getSimulationObject()
+    val factory = getSimulationObject()
     factory.resetSimulation()
 
     val initialStock = listOf(
@@ -75,5 +74,5 @@ suspend fun main(args: Array<String>) {
 
     println("   - Найпопулярніший напій: ${popular.type.javaClass.simpleName} (${popular.count} шт.)")
     println("   - Напій з найбільшим заробітком: ${mostEarnings.first.javaClass.simpleName} (${mostEarnings.second} грн.)")
-    startTestUi(SimulationConfig.seed(), SimulationConfig.labNumber())
+    startTestUi(seed(), labNumber())
 }
