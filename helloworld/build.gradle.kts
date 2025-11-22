@@ -16,6 +16,7 @@ maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 dependencies {
     implementation(Versions.library)
     implementation(compose.desktop.currentOs)
+    implementation(project(":caffe"))
     testImplementation(kotlin("test"))
 }
 
